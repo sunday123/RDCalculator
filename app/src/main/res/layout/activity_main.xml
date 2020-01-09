@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="8dp">
+
+        <TextView
+            android:id="@+id/hexLabel"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:fontFamily="serif"
+            android:text="十六进制"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/hexInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapCharacters"
+            android:digits="0123456789ABCDEF"
+            android:ems="10"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/decLabel"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:fontFamily="serif"
+            android:text="十进制"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/decInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:digits="0123456789"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/octLabel"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:fontFamily="serif"
+            android:text="八进制"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/octInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:digits="01234567"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/binLabel"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:fontFamily="serif"
+            android:text="二进制"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/binInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:digits="01"
+            android:text=""
+             />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="注意：十六进制ABCDEF是大写形式"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
