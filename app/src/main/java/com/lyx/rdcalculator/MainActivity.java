@@ -1,9 +1,12 @@
 package com.lyx.rdcalculator;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
 import android.widget.EditText;
 
 import java.math.BigInteger;
@@ -216,4 +219,9 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+    public void aboutAction(View view) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("联系我:695200158@qq.com");
+        builder.show();
+    }
 }
