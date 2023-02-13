@@ -221,7 +221,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void aboutAction(View view) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("联系我:695200158@qq.com");
+        builder.setMessage("联系我:linyongxinn@gmail.com");
         builder.show();
     }
 }
