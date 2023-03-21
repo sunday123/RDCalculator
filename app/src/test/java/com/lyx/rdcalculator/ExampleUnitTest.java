@@ -1,4 +1,4 @@
-package com.lyx.rdcalculator;
+package com.ij34.rdcalculator;
 
 import org.junit.Test;
 

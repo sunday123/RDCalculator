@@ -1,4 +1,4 @@
-package com.lyx.rdcalculator;
+package com.ij34.rdcalculator;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals( "com.lyx.rdcalculator", appContext.getPackageName() );
+        assertEquals( "com.ij34.rdcalculator", appContext.getPackageName() );
     }
 }

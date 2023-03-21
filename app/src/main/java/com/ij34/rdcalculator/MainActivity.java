@@ -1,19 +1,22 @@
-package com.lyx.rdcalculator;
+package com.ij34.rdcalculator;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.SeekBar;
 
+
+import java.io.Console;
 import java.math.BigInteger;
 
 public class MainActivity extends AppCompatActivity {
     private EditText hexInput,decInput,octInput,binInput;
-
 
 
 
@@ -33,8 +36,6 @@ public class MainActivity extends AppCompatActivity {
         octInput = findViewById( R.id.octInput );
         binInput = findViewById( R.id.binInput );
 
-
-
         //16
         hexInput.addTextChangedListener(hexTextWatcher );
         //10
@@ -44,7 +45,10 @@ public class MainActivity extends AppCompatActivity {
         //2
         binInput.addTextChangedListener(binTextWatcher);
 
+
+
     }
+
 
     //16进制监听事件
     TextWatcher hexTextWatcher=new TextWatcher() {
@@ -221,7 +225,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void aboutAction(View view) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("联系我:linyongxinn@gmail.com");
+        builder.setMessage("联系我:lyx668@outlook.com");
         builder.show();
     }
 }
