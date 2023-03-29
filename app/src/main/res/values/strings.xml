@@ -1,3 +1,23 @@
 <resources>
-    <string name="app_name">进制转换</string>
+    <string name="app_name">rdcalculator</string>
+
+    <string name="hex_label_name">hexadecimal</string>
+
+    <string name="decimal_label_name">decimal</string>
+    <string name="octal_label_name">octal</string>
+    <string name="binary_label_name">binary</string>
+    <string name="about_btn_name">about</string>
+    <string name="about_activity_title">👈about</string>
+    <string name="tip_name">Tip: Hexadecimal ABCDEF is uppercase</string>
+    <string name="contact_me_email">contact me</string>
+    <string name="share_app_to_friend">invite friends</string>
+    <string name="privacy_policy">privacy policy</string>
+    <string name="app_version">version</string>
+    <string name="share_app_content">Hey, open https://play.google.com/store/apps/details?id=com.ij34.rdcalculator to see our RDCalculator</string>
+    <string name="privacy_policy_url">https://raw.githubusercontent.com/sunday123/RDCalculator/master/privacy_policy</string>
+    <string name="read_before_use_title">Terms of use</string>
+    <string name="read_before_use_content">If you continue to use this application, you agree to the privacy policy of this application by default. Otherwise please do not use this app!</string>
+    <string name="agree_btn">agree</string>
+    <string name="disagree_btn">disagree</string>
+
 </resources>

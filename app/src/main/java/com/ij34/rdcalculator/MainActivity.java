@@ -1,19 +1,23 @@
 package com.ij34.rdcalculator;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.app.ActivityManager;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
-import android.provider.Settings;
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.SeekBar;
 
-
-import java.io.Console;
 import java.math.BigInteger;
+import java.util.prefs.Preferences;
+
 
 public class MainActivity extends AppCompatActivity {
     private EditText hexInput,decInput,octInput,binInput;
@@ -31,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void init() {
+
         hexInput = findViewById( R.id.hexInput );
         decInput = findViewById( R.id.decInput );
         octInput = findViewById( R.id.octInput );
@@ -44,6 +49,49 @@ public class MainActivity extends AppCompatActivity {
         octInput.addTextChangedListener(octTextWatcher);
         //2
         binInput.addTextChangedListener(binTextWatcher);
+
+        checkFirstInstall();
+
+    }
+
+
+    private void checkFirstInstall() {
+        SharedPreferences preferences = getSharedPreferences("com-ij34-rdcalculator", 0);
+        System.out.println("版本"+BuildConfig.VERSION_NAME);
+        String a = preferences.getString("agree-version","");
+        if (a.equals(BuildConfig.VERSION_NAME)){
+            return;
+        }
+
+        //添加普通按钮
+        AlertDialog alertDialog2 = new AlertDialog.Builder(this)
+                .setTitle(this.getString(R.string.read_before_use_title))
+                .setMessage(this.getString(R.string.read_before_use_content))
+                .setIcon(R.mipmap.ic_launcher)
+                .setPositiveButton(this.getString(R.string.agree_btn), new DialogInterface.OnClickListener() {//添加"Yes"按钮
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        SharedPreferences.Editor editor = preferences.edit();
+                        editor.putString("agree-version",BuildConfig.VERSION_NAME);
+                        editor.commit();
+                    }
+                })
+
+                .setNegativeButton(this.getString(R.string.disagree_btn), (dialogInterface, i) -> {
+
+                    android.os.Process.killProcess(android.os.Process.myPid());
+                })
+                .setNeutralButton(this.getString(R.string.privacy_policy), (dialogInterface, i) -> {//Intent.ACTION_VIEW
+                    Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse(this.getString(R.string.privacy_policy_url)));
+                    startActivity(intent);
+
+                })
+                .create();
+        alertDialog2.show();
+
+
+
+
 
 
 
@@ -224,8 +272,8 @@ public class MainActivity extends AppCompatActivity {
     };
 
     public void aboutAction(View view) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("联系我:lyx668@outlook.com");
-        builder.show();
+        Intent intent=new Intent(this,AboutActivity.class);
+        startActivity(intent);
+
     }
 }

@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">进制转换</string>
+    <string name="hex_label_name">十六进制</string>
+    <string name="decimal_label_name">十进制</string>
+    <string name="octal_label_name">八进制</string>
+    <string name="binary_label_name">二进制</string>
+    <string name="about_btn_name">关于</string>
+    <string name="about_activity_title">👈关于</string>
+    <string name="tip_name">注意：十六进制ABCDEF是大写形式</string>
+    <string name="contact_me_email">联系我</string>
+    <string name="share_app_to_friend">分享给好友</string>
+    <string name="privacy_policy">隐私政策</string>
+    <string name="app_version">版本</string>
+    <string name="share_app_content">嘿，请打开 https://play.google.com/store/apps/details?id=com.ij34.rdcalculator 看看我们的 进制转换 吧</string>
+    <string name="privacy_policy_url">https://raw.githubusercontent.com/sunday123/RDCalculator/master/privacy_policy_zh</string>
+    <string name="read_before_use_title">使用条款说明</string>
+    <string name="read_before_use_content">如果你继续使用本应用，就默认同意本应用的隐私政策。否则请不要用本应用！</string>
+    <string name="agree_btn">同意</string>
+    <string name="disagree_btn">不同意</string>
+
+
+</resources>
